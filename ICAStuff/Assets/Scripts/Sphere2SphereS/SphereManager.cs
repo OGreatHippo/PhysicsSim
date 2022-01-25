@@ -7,6 +7,7 @@ public class SphereManager : MonoBehaviour
     [SerializeField] private GameObject[] balls;
     private sphere[] spheres;
     //private GameObject[] planes;
+    [SerializeField] private AudioSource ballhit;
 
     struct sphere
     {
@@ -79,6 +80,7 @@ public class SphereManager : MonoBehaviour
                 if (t < 1 && t > 0)
                 {
                     print("collision");
+                    ballhit.Play(1);
                     balls[i].GetComponent<Velocity>().velocity *= 0;
                     balls[j].GetComponent<Velocity>().velocity *= 0;
                 }
