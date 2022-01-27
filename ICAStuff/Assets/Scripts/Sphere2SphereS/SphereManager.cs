@@ -68,21 +68,28 @@ public class SphereManager : MonoBehaviour
                 B = Vector3.Dot(deltaP, deltaV) * 2;
                 C = deltaP.sqrMagnitude - ((balls[i].transform.localScale.x + balls[i].transform.localScale.x) * (balls[j].transform.localScale.x + balls[j].transform.localScale.x) / 4);
 
-                if ((B * B) - (4 * (A * C)) < 0)
+                if ((B * B) - (4 * (A * C)) > 0)
                 {
-                    return;
-                }
+                    sqrt = Mathf.Sqrt((B * B) - (4 * (A * C)));
 
-                sqrt = Mathf.Sqrt((B * B) - (4 * (A * C)));
+                    t = (-B - sqrt) / (2 * A);
 
-                t = (-B - sqrt) / (2 * A);
+                    if (t < 1 && t > 0)
+                    {
+                        ballhit.Play(1);
 
-                if (t < 1 && t > 0)
-                {
-                    print("collision");
-                    ballhit.Play(1);
-                    balls[i].GetComponent<Velocity>().velocity *= 0;
-                    balls[j].GetComponent<Velocity>().velocity *= 0;
+                        Vector3 vr = balls[i].GetComponent<Velocity>().velocity - balls[j].GetComponent<Velocity>().velocity;
+
+                        float vj = -(1 + 0.8f) * Vector3.Dot(vr, deltaP.normalized);
+
+                        float m1i = 1 / balls[i].GetComponent<Velocity>().mass;
+                        float m2i = 1 / balls[j].GetComponent<Velocity>().mass;
+
+                        float J = vj / (m1i + m2i);
+
+                        balls[i].GetComponent<Velocity>().velocity += m1i * J * deltaP.normalized;
+                        balls[j].GetComponent<Velocity>().velocity -= m2i * J * deltaP.normalized;
+                    }
                 }
             }
         }
