@@ -5,31 +5,14 @@ using UnityEngine;
 public class SphereManager : MonoBehaviour
 {
     [SerializeField] private GameObject[] balls;
-    private sphere[] spheres;
-    //private GameObject[] planes;
+    [SerializeField] private GameObject[] planes;
     [SerializeField] private AudioSource ballhit;
-
-    struct sphere
-    {
-        public Vector3 position;
-        public Vector3 speedyboi;
-        public float radius;
-    }
 
     // Start is called before the first frame update
     void Start()
     {
-        balls = GameObject.FindGameObjectsWithTag("Sphere");
-        spheres = new sphere[balls.Length];
-
-        for (int i = 0; i < balls.Length; i++)
-        {
-            spheres[i].position = balls[i].transform.position;
-            spheres[i].speedyboi = balls[i].GetComponent<Velocity>().velocity;
-            spheres[i].radius = balls[i].transform.localScale.x / 2;
-        }
-
-       // planes = GameObject.FindGameObjectsWithTag("Plane");
+       balls = GameObject.FindGameObjectsWithTag("Sphere");
+       planes = GameObject.FindGameObjectsWithTag("Plane");
     }
 
     // Update is called once per frame

@@ -220,6 +220,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8660704 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2959600736974204969, guid: 27efa38711268f84ab74ee53835b8ec8, type: 3}
+  m_PrefabInstance: {fileID: 2098553747}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8660705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8660704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aafdcacb7507b4645851a876cdc0ccd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  mass: 1e+18
 --- !u!1 &72213269
 GameObject:
   m_ObjectHideFlags: 0
@@ -251,6 +270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   balls: []
+  planes: []
   ballhit: {fileID: 72213272}
 --- !u!4 &72213271
 Transform:
@@ -362,6 +382,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &518262980 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2959600736974204969, guid: 27efa38711268f84ab74ee53835b8ec8, type: 3}
+  m_PrefabInstance: {fileID: 1777243336}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &518262981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 518262980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aafdcacb7507b4645851a876cdc0ccd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  mass: 1e+18
 --- !u!1 &534055124
 GameObject:
   m_ObjectHideFlags: 0
@@ -829,6 +868,44 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
+--- !u!1 &1389329551 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2959600736974204969, guid: 27efa38711268f84ab74ee53835b8ec8, type: 3}
+  m_PrefabInstance: {fileID: 7504578352142530829}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1389329552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1389329551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aafdcacb7507b4645851a876cdc0ccd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  mass: 1e+18
+--- !u!1 &1568499078 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2959600736974204969, guid: 27efa38711268f84ab74ee53835b8ec8, type: 3}
+  m_PrefabInstance: {fileID: 1731420829}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1568499079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568499078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aafdcacb7507b4645851a876cdc0ccd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  mass: 1e+18
 --- !u!1001 &1731420829
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -839,6 +916,10 @@ PrefabInstance:
     - target: {fileID: 2959600736974204969, guid: 27efa38711268f84ab74ee53835b8ec8, type: 3}
       propertyPath: m_Name
       value: Cube (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2959600736974204969, guid: 27efa38711268f84ab74ee53835b8ec8, type: 3}
+      propertyPath: m_TagString
+      value: Plane
       objectReference: {fileID: 0}
     - target: {fileID: 5222149812797861534, guid: 27efa38711268f84ab74ee53835b8ec8, type: 3}
       propertyPath: m_RootOrder
@@ -902,6 +983,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2959600736974204969, guid: 27efa38711268f84ab74ee53835b8ec8, type: 3}
+      propertyPath: m_TagString
+      value: Plane
+      objectReference: {fileID: 0}
     - target: {fileID: 5222149812797861534, guid: 27efa38711268f84ab74ee53835b8ec8, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -964,6 +1049,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2959600736974204969, guid: 27efa38711268f84ab74ee53835b8ec8, type: 3}
+      propertyPath: m_TagString
+      value: Plane
+      objectReference: {fileID: 0}
     - target: {fileID: 5222149812797861534, guid: 27efa38711268f84ab74ee53835b8ec8, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -1021,6 +1110,10 @@ PrefabInstance:
     - target: {fileID: 2959600736974204969, guid: 27efa38711268f84ab74ee53835b8ec8, type: 3}
       propertyPath: m_Name
       value: Cube
+      objectReference: {fileID: 0}
+    - target: {fileID: 2959600736974204969, guid: 27efa38711268f84ab74ee53835b8ec8, type: 3}
+      propertyPath: m_TagString
+      value: Plane
       objectReference: {fileID: 0}
     - target: {fileID: 5222149812797861534, guid: 27efa38711268f84ab74ee53835b8ec8, type: 3}
       propertyPath: m_RootOrder
